@@ -1,10 +1,12 @@
 #include <bits/stdc++.h>
+#define all(v) v.begin(), v.end()
+#define input(v) for (auto &i : v) cin >> i;
 using namespace std;
 #define int long long
 typedef vector<int> ints;
-int maxProduct(ints &v) {
-    int p1 = 0, p2 = 0, n1 = 0, n2 = 0;
-    for (auto i : v)
+int solve(ints &v) {
+    int p1(0), p2(0), n1(0), n2(0);
+    for_each(all(v), [&p1, &p2, &n1, &n2](auto i) {
         if (i >= 0) {
             if (i > p1) {
                 p2 = p1;
@@ -18,13 +20,12 @@ int maxProduct(ints &v) {
             } else if (i < n2)
                 n2 = i;
         }
+    });
     return max(p1 * p2, n1 * n2);
 }
 int32_t main() {
-    int n;
-    cin >> n;
-    ints v(n);
-    for (auto &i : v)
-        cin >> i;
-    cout << maxProduct(v);
+    int n; cin >> n;
+    ints v(n); input(v);
+    cout << solve(v);
+    return 0;
 }
