@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 #define all(v) v.begin(), v.end()
 #define input(v) for (auto &i : v) cin >> i;
-using namespace std;
 #define int long long
+using namespace std;
 typedef vector<int> ints;
 int solve(ints &v) {
     int p1(0), p2(0), n1(0), n2(0);
