@@ -10,6 +10,8 @@ g++ -pipe -O2 -std=c++14 <filename> -lm
 
 **Disclaimer:** If you are enrolled in any of the courses of this specialization, please strictly follow the [Coursera Honor Code](https://learner.coursera.help/hc/en-us/articles/209818863-Coursera-Honor-Code). The sole motive of publishing this repository publicly was to provide you with **some reference**. Please view the code **only** when you are really struck at a problem, and that too after performing [stress testing](https://www.coursera.org/lecture/algorithmic-toolbox/stress-test-implementation-Bskph).
 
+**Note:** While doing these courses I was focussing much on my competitive coding skills rather than the developmental ones. Consequently, I have used many tricks, macro definitions and C++ features (and that too without great formatting and comments) which may confuse a newbie. I don't recommend using all of these tricks everywhere, they are included here because it is a good learning experience. You can go and research about each trick. And in the end you can also design a template for yourself if you want to continue with C++14/C++17 while giving competitions. The code present here is not much ideal. In some places, instead of designing and implementing an algorithm myself I have used standard STL functions and also have took implementations of certain functions directly from the Boost library. I have tried my best to give minimal code along with best possible (time and space) complexity. At many places code can be made more space efficient by using lower level data structures instead of C++ containers. Anyone who wants to enhance the codes in any terms is most welcomed!
+
 ## Course 1. Algorithmic Toolbox
 
 ### Week 1. Programming Challenges
