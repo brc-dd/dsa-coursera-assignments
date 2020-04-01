@@ -1,27 +1,18 @@
-#include <algorithm>
-#include <iostream>
-#include <vector>
-
-using std::vector;
-
-long long max_dot_product(vector<int> a, vector<int> b) {
-  // write your code here
-  long long result = 0;
-  for (size_t i = 0; i < a.size(); i++) {
-    result += ((long long) a[i]) * b[i];
-  }
-  return result;
-}
-
-int main() {
-  size_t n;
-  std::cin >> n;
-  vector<int> a(n), b(n);
-  for (size_t i = 0; i < n; i++) {
-    std::cin >> a[i];
-  }
-  for (size_t i = 0; i < n; i++) {
-    std::cin >> b[i];
-  }
-  std::cout << max_dot_product(a, b) << std::endl;
+#include <bits/stdc++.h>
+#define int long long
+#define all(v) v.begin(), v.end()
+using namespace std;
+typedef vector<int> ints;
+int32_t main() {
+    int n;
+    cin >> n;
+    ints a(n), b(n);
+    for (auto &i : a)
+        cin >> i;
+    for (auto &i : b)
+        cin >> i;
+    sort(all(a));
+    sort(all(b));
+    cout << inner_product(all(a), b.begin(), (int)0);
+    return 0;
 }

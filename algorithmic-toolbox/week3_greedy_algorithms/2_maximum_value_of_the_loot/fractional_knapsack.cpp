@@ -1,29 +1,32 @@
-#include <iostream>
-#include <vector>
-
-using std::vector;
-
-double get_optimal_value(int capacity, vector<int> weights, vector<int> values) {
-  double value = 0.0;
-
-  // write your code here
-
-  return value;
+#include <bits/stdc++.h>
+#define all(v) v.begin(), v.end()
+using namespace std;
+typedef pair<int, int> pii;
+typedef vector<pii> pairs;
+double knapsackSolver(int W, pairs &V) {
+    sort(all(V), [](const auto &a, const auto &b) {
+        return (double)a.first / a.second > (double)b.first / b.second;
+    });
+    int c = 0;
+    double f = 0;
+    for (auto &i : V) {
+        if (c + i.second <= W) {
+            c += i.second;
+            f += i.first;
+        } else {
+            int r = W - c;
+            f += i.first * ((double)r / i.second);
+            break;
+        }
+    }
+    return f;
 }
-
 int main() {
-  int n;
-  int capacity;
-  std::cin >> n >> capacity;
-  vector<int> values(n);
-  vector<int> weights(n);
-  for (int i = 0; i < n; i++) {
-    std::cin >> values[i] >> weights[i];
-  }
-
-  double optimal_value = get_optimal_value(capacity, weights, values);
-
-  std::cout.precision(10);
-  std::cout << optimal_value << std::endl;
-  return 0;
+    int n, W;
+    cin >> n >> W;
+    pairs V(n);
+    for (auto &i : V)
+        cin >> i.first >> i.second;
+    cout << fixed << setprecision(4) << knapsackSolver(W, V);
+    return 0;
 }

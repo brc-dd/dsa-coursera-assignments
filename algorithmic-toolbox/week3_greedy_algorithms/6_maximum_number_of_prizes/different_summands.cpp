@@ -1,20 +1,22 @@
-#include <iostream>
-#include <vector>
-
-using std::vector;
-
-vector<int> optimal_summands(int n) {
-  vector<int> summands;
-  //write your code here
-  return summands;
-}
-
-int main() {
-  int n;
-  std::cin >> n;
-  vector<int> summands = optimal_summands(n);
-  std::cout << summands.size() << '\n';
-  for (size_t i = 0; i < summands.size(); ++i) {
-    std::cout << summands[i] << ' ';
-  }
+#include <bits/stdc++.h>
+#define pb push_back
+using namespace std;
+typedef vector<int> ints;
+int32_t main() {
+    int n, s, c = 1;
+    cin >> n;
+    s = n;
+    ints v;
+    while (s) {
+        v.pb(c);
+        s -= c++;
+        if (c > s) {
+            v.back() += s;
+            s = 0;
+        }
+    }
+    cout << v.size() << endl;
+    for (auto &i : v)
+        cout << i << " ";
+    return 0;
 }
