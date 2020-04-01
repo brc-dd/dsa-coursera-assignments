@@ -1,25 +1,47 @@
-#include <iostream>
-#include <vector>
-
-using std::vector;
-
-long long get_number_of_inversions(vector<int> &a, vector<int> &b, size_t left, size_t right) {
-  long long number_of_inversions = 0;
-  if (right <= left + 1) return number_of_inversions;
-  size_t ave = left + (right - left) / 2;
-  number_of_inversions += get_number_of_inversions(a, b, left, ave);
-  number_of_inversions += get_number_of_inversions(a, b, ave, right);
-  //write your code here
-  return number_of_inversions;
+#include <bits/stdc++.h>
+#define int long long
+#define all(v) v.begin(), v.end()
+#define input(v)      \
+    for (auto &i : v) \
+    cin >> i
+#define decl_read(v, n) \
+    ints v(n);          \
+    input(v)
+#define print(v)      \
+    for (auto &i : v) \
+    cout << i << " "
+#define pb push_back
+using namespace std;
+typedef vector<int> ints;
+using namespace std;
+ints merge(const ints &l, const ints &r, int &c) {
+    ints res;
+    int i(0), j(0);
+    while (i < l.size() && j < r.size())
+        if (l[i] <= r[j])
+            res.pb(l[i++]);
+        else {
+            res.pb(r[j++]);
+            c += (l.size() - i);
+        }
+    for (; i < l.size(); i++)
+        res.pb(l[i]);
+    for (; j < r.size(); j++)
+        res.pb(r[j]);
+    return res;
 }
-
-int main() {
-  int n;
-  std::cin >> n;
-  vector<int> a(n);
-  for (size_t i = 0; i < a.size(); i++) {
-    std::cin >> a[i];
-  }
-  vector<int> b(a.size());
-  std::cout << get_number_of_inversions(a, b, 0, a.size()) << '\n';
+ints ms(ints &v, int &c) {
+    if (v.size() < 2)
+        return v;
+    int m = v.size() / 2;
+    ints l(v.begin(), v.begin() + m), r(v.begin() + m, v.end());
+    return merge(ms(l, c), ms(r, c), c);
+}
+int32_t main() {
+    int n;
+    cin >> n;
+    decl_read(v, n);
+    int c = 0;
+    ms(v, c);
+    cout << c;
 }

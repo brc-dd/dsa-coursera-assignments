@@ -1,22 +1,16 @@
-#include <algorithm>
-#include <iostream>
-#include <vector>
-
-using std::vector;
-
-int get_majority_element(vector<int> &a, int left, int right) {
-  if (left == right) return -1;
-  if (left + 1 == right) return a[left];
-  //write your code here
-  return -1;
-}
-
-int main() {
-  int n;
-  std::cin >> n;
-  vector<int> a(n);
-  for (size_t i = 0; i < a.size(); ++i) {
-    std::cin >> a[i];
-  }
-  std::cout << (get_majority_element(a, 0, a.size()) != -1) << '\n';
+#include <bits/stdc++.h>
+#define int long long
+#define all(v) v.begin(), v.end()
+#define input(v) for (auto &i : v) cin >> i
+#define decl_read(v, n) ints v(n); input(v)
+using namespace std;
+typedef vector<int> ints;
+int32_t main() {
+    int n, m(0), c(0); cin >> n;
+    decl_read(v, n);
+    for (auto &i : v)
+        if (c == 0) m = i, c = 1;
+        else (m == i) ? c++ : c--;
+    cout << (count(all(v), m) > n / 2);
+    return 0;
 }
