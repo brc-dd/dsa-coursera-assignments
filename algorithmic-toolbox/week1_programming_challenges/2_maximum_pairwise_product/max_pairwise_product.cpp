@@ -1,12 +1,10 @@
-// Programmed by Divyansh Singh (brc-dd)
-
-#include <algorithm>
-#include <iostream>
-#include <vector>
-
-int MaxPairwiseProduct(const std::vector<int> &numbers) {
-    int p1(0), p2(0), n1(0), n2(0);
-    for (auto i : numbers)
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long
+typedef vector<int> ints;
+int maxProduct(ints &v) {
+    int p1 = 0, p2 = 0, n1 = 0, n2 = 0;
+    for (auto i : v)
         if (i >= 0) {
             if (i > p1) {
                 p2 = p1;
@@ -20,16 +18,13 @@ int MaxPairwiseProduct(const std::vector<int> &numbers) {
             } else if (i < n2)
                 n2 = i;
         }
-    return std::max(p1 * p2, n1 * n2);
-} // O(n) time complexity ||| O(1) space complexity
-
-int main() {
+    return max(p1 * p2, n1 * n2);
+}
+int32_t main() {
     int n;
-    std::cin >> n;
-    std::vector<int> numbers(n);
-    for (int i = 0; i < n; ++i) {
-        std::cin >> numbers[i];
-    }
-    std::cout << MaxPairwiseProduct(numbers) << "\n";
-    return 0;
+    cin >> n;
+    ints v(n);
+    for (auto &i : v)
+        cin >> i;
+    cout << maxProduct(v);
 }

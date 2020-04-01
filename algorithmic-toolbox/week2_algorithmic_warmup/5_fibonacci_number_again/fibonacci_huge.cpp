@@ -1,23 +1,31 @@
-#include <iostream>
-
-long long get_fibonacci_huge_naive(long long n, long long m) {
-    if (n <= 1)
-        return n;
-
-    long long previous = 0;
-    long long current  = 1;
-
-    for (long long i = 0; i < n - 1; ++i) {
-        long long tmp_previous = previous;
-        previous = current;
-        current = tmp_previous + current;
+#include <bits/stdc++.h>
+#define int long long
+using namespace std;
+int solve(int n, int m) {
+    int a = 0, b = 1, c;
+    for (int i = 0; i < m * m; i++) {
+        c = (a + b) % m;
+        a = b;
+        b = c;
+        if (a == 0 and b == 1) {
+            c = i + 1;
+            break;
+        }
     }
-
-    return current % m;
+    n %= c;
+    if (n == 0)
+        return 0;
+    a = 0, b = 1;
+    for (int i = 1; i < n; i++) {
+        c = (a + b) % m;
+        a = b;
+        b = c;
+    }
+    return (b % m);
 }
-
-int main() {
-    long long n, m;
-    std::cin >> n >> m;
-    std::cout << get_fibonacci_huge_naive(n, m) << '\n';
+int32_t main() {
+    int n, m;
+    cin >> n >> m;
+    cout << solve(n, m);
+    return 0;
 }
