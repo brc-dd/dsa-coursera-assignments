@@ -1,22 +1,21 @@
 #include <bits/stdc++.h>
 #define pb push_back
+#define print(v) for(auto &i : v) cout << i << " "
 using namespace std;
 typedef vector<int> ints;
 int32_t main() {
-    int n, s, c = 1;
+    int n, c(1);
     cin >> n;
-    s = n;
     ints v;
-    while (s) {
+    while (n) {
         v.pb(c);
-        s -= c++;
-        if (c > s) {
-            v.back() += s;
-            s = 0;
+        n -= c++;
+        if (c > n) {
+            v.back() += n;
+            break;
         }
     }
     cout << v.size() << endl;
-    for (auto &i : v)
-        cout << i << " ";
+    print(v);
     return 0;
 }

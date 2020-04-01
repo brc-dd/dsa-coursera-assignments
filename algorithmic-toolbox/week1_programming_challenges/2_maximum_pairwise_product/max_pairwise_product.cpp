@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #define all(v) v.begin(), v.end()
-#define input(v) for (auto &i : v) cin >> i;
+#define input(v) for (auto &i : v) cin >> i
 #define int long long
 using namespace std;
 typedef vector<int> ints;

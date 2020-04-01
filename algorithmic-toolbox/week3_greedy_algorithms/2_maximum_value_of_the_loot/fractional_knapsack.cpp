@@ -1,32 +1,29 @@
 #include <bits/stdc++.h>
 #define all(v) v.begin(), v.end()
+#define fir first
+#define se second
+#define input_vp(v) for (auto &i : v) cin >> i.fir >> i.se
 using namespace std;
 typedef pair<int, int> pii;
 typedef vector<pii> pairs;
-double knapsackSolver(int W, pairs &V) {
-    sort(all(V), [](const auto &a, const auto &b) {
-        return (double)a.first / a.second > (double)b.first / b.second;
+int main() {
+    int n, W, c(0), r;
+    double f(0);
+    cin >> n >> W;
+    pairs V(n); input_vp(V);
+    sort(all(V), [](auto &a, auto &b) {
+        return (double)a.fir / a.se > (double)b.fir / b.se;
     });
-    int c = 0;
-    double f = 0;
     for (auto &i : V) {
-        if (c + i.second <= W) {
-            c += i.second;
-            f += i.first;
+        if (c + i.se <= W) {
+            c += i.se;
+            f += i.fir;
         } else {
-            int r = W - c;
-            f += i.first * ((double)r / i.second);
+            r = W - c;
+            f += i.fir * ((double)r / i.se);
             break;
         }
     }
-    return f;
-}
-int main() {
-    int n, W;
-    cin >> n >> W;
-    pairs V(n);
-    for (auto &i : V)
-        cin >> i.first >> i.second;
-    cout << fixed << setprecision(4) << knapsackSolver(W, V);
+    cout << fixed << setprecision(4) << f;
     return 0;
 }
