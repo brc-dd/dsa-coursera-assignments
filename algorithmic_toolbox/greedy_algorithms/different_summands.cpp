@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 #define pb push_back
-#define print(v) for(auto &i : v) cout << i << " "
+#define print(v)      \
+    for (auto &i : v) \
+    cout << i << ' '
 using namespace std;
 typedef vector<int> ints;
 int32_t main() {

@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 #define all(v) v.begin(), v.end()
-#define input(v) for (auto &i : v) cin >> i
+#define input(v)      \
+    for (auto &i : v) \
+    cin >> i
 #define int long long
 using namespace std;
 typedef vector<int> ints;
@@ -24,8 +26,10 @@ int solve(ints &v) {
     return max(p1 * p2, n1 * n2);
 }
 int32_t main() {
-    int n; cin >> n;
-    ints v(n); input(v);
+    int n;
+    cin >> n;
+    ints v(n);
+    input(v);
     cout << solve(v);
     return 0;
 }

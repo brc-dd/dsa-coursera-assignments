@@ -2,13 +2,16 @@
 #define int long long
 #define all(v) v.begin(), v.end()
 #define pb push_back
-#define print(v) for(auto &i : v) cout << i << " "
+#define print(v)      \
+    for (auto &i : v) \
+    cout << i << ' '
 using namespace std;
 typedef pair<int, int> pii;
 typedef vector<int> ints;
 typedef vector<pii> pairs;
 int32_t main() {
-    int n; cin >> n;
+    int n;
+    cin >> n;
     pairs v(n);
     for (auto &i : v)
         cin >> i.second >> i.first;

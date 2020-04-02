@@ -2,7 +2,9 @@
 #define all(v) v.begin(), v.end()
 #define fir first
 #define se second
-#define input_vp(v) for (auto &i : v) cin >> i.fir >> i.se
+#define input_vp(v)   \
+    for (auto &i : v) \
+    cin >> i.fir >> i.se
 using namespace std;
 typedef pair<int, int> pii;
 typedef vector<pii> pairs;
@@ -10,7 +12,8 @@ int main() {
     int n, W, c(0), r;
     double f(0);
     cin >> n >> W;
-    pairs V(n); input_vp(V);
+    pairs V(n);
+    input_vp(V);
     sort(all(V), [](auto &a, auto &b) {
         return (double)a.fir / a.se > (double)b.fir / b.se;
     });

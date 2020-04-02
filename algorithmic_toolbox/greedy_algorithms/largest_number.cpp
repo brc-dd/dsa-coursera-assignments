@@ -1,7 +1,11 @@
 #include <bits/stdc++.h>
 #define all(v) v.begin(), v.end()
-#define input(v) for(auto &i : v) cin >> i
-#define print_nospace(v) for(auto &i : v) cout << i
+#define input(v)      \
+    for (auto &i : v) \
+    cin >> i
+#define print_nospace(v) \
+    for (auto &i : v)    \
+    cout << i
 #define int long long
 using namespace std;
 typedef vector<string> strings;
