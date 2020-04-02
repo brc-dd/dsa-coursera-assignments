@@ -25,9 +25,9 @@ int32_t main() {
     ints points(p);
     for (int i(0); i < s; i++) {
         cin >> t;
-        v.pb(mp(t, 1));
-        cin >> t;
         v.pb(mp(t, -1));
+        cin >> t;
+        v.pb(mp(t, 1));
     }
     for (int i(0); i < p; i++) {
         cin >> t;
@@ -38,10 +38,9 @@ int32_t main() {
     map<int, int> dict;
     for (auto &i : v)
         if (i.se)
-            c += i.se;
+            c -= i.se;
         else
             dict[i.fir] = c;
-
     for (auto &i : points)
         cout << dict[i] << ' ';
     return 0;
