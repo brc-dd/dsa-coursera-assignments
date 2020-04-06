@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#define int long long
 #define all(v) v.begin(), v.end()
 #define fir first
 #define se second
@@ -8,7 +9,7 @@
 using namespace std;
 typedef pair<int, int> pii;
 typedef vector<pii> pairs;
-int main() {
+int32_t main() {
     int n, W, c(0), r;
     double f(0);
     cin >> n >> W;

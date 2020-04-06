@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
+#define int long long
 using namespace std;
-int main() {
+int32_t main() {
     int m, ans(0);
     cin >> m;
     int denominations[] = {10, 5, 1};

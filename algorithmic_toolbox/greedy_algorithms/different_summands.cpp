@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#define int long long
 #define pb push_back
 #define print(v)      \
     for (auto &i : v) \

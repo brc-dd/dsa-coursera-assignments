@@ -1,11 +1,12 @@
 #include <bits/stdc++.h>
+#define int long long
 #define input(v)      \
     for (auto &i : v) \
     cin >> i
 #define pb push_back
 using namespace std;
 typedef vector<int> ints;
-int main() {
+int32_t main() {
     int d, m, n, ctr(0), c(0), l(0);
     cin >> d >> m >> n;
     ints v(n);
