@@ -14,15 +14,13 @@ g++ -pipe -O2 -std=c++14 <filename> -lm
 
 ## Course 1. Algorithmic Toolbox
 
-### Week 1. Programming Challenges
+### [Week 1. Programming Challenges](/algorithmic_toolbox/programming_challenges/assign.pdf)
 
-- [Programming Assignment](/algorithmic_toolbox/programming_challenges/assign.pdf)
 - [Sum of Two Digits](/algorithmic_toolbox/programming_challenges/APlusB.cpp)
 - [Maximum Pairwise Product](/algorithmic_toolbox/programming_challenges/max_pairwise_product.cpp)
 
-### Week 2. Algorithmic Warm-up
+### [Week 2. Algorithmic Warm-up](/algorithmic_toolbox/algorithmic_warmup/assign.pdf)
 
-- [Programming Assignment](/algorithmic_toolbox/algorithmic_warmup/assign.pdf)
 - [Fibonacci Number](/algorithmic_toolbox/algorithmic_warmup/fibonacci.cpp)
 - [Last Digit of a Large Fibonacci Number](/algorithmic_toolbox/algorithmic_warmup/fibonacci_last_digit.cpp)
 - [Greatest Common Divisor](/algorithmic_toolbox/algorithmic_warmup/gcd.cpp)
@@ -32,9 +30,8 @@ g++ -pipe -O2 -std=c++14 <filename> -lm
 - [Last Digit of the Sum of Fibonacci Numbers Again](/algorithmic_toolbox/algorithmic_warmup/fibonacci_partial_sum.cpp)
 - [Last Digit of the Sum of Squares of Fibonacci Numbers](/algorithmic_toolbox/algorithmic_warmup/fibonacci_sum_squares.cpp)
 
-### Week 3. Greedy Algorithms
+### [Week 3. Greedy Algorithms](/algorithmic_toolbox/greedy_algorithms/assign.pdf)
 
-- [Programming Assignment](/algorithmic_toolbox/greedy_algorithms/assign.pdf)
 - [Money Change](/algorithmic_toolbox/greedy_algorithms/change.cpp)
 - [Maximum Value of the Loot](/algorithmic_toolbox/greedy_algorithms/fractional_knapsack.cpp)
 - [Maximum Advertisement Revenue](/algorithmic_toolbox/greedy_algorithms/dot_product.cpp)
@@ -42,9 +39,8 @@ g++ -pipe -O2 -std=c++14 <filename> -lm
 - [Maximum Number of Prizes](/algorithmic_toolbox/greedy_algorithms/different_summands.cpp)
 - [Maximum Salary](/algorithmic_toolbox/greedy_algorithms/largest_number.cpp)
 
-### Week 4. Divide-and-Conquer
+### [Week 4. Divide-and-Conquer](/algorithmic_toolbox/divide_and_conquer/assign.pdf)
 
-- [Programming Assignment](/algorithmic_toolbox/divide_and_conquer/assign.pdf)
 - [Binary Search](/algorithmic_toolbox/divide_and_conquer/binary_search.cpp)
 - [Majority Element](/algorithmic_toolbox/divide_and_conquer/majority_element.cpp)
 - [Improving Quick Sort](/algorithmic_toolbox/divide_and_conquer/sorting.cpp)
@@ -52,18 +48,16 @@ g++ -pipe -O2 -std=c++14 <filename> -lm
 - [Organizing a Lottery](/algorithmic_toolbox/divide_and_conquer/points_and_segments.cpp)
 - [Closest Points](/algorithmic_toolbox/divide_and_conquer/closest.cpp)
 
-### Week 5. Dynamic Programming 1
+### [Week 5. Dynamic Programming 1](/algorithmic_toolbox/dynamic_programming/assign.pdf)
 
-- [Programming Assignment](/algorithmic_toolbox/dynamic_programming/assign.pdf)
 - [Money Change Again](/algorithmic_toolbox/dynamic_programming/change_dp.cpp)
 - [Primitive Calculator](/algorithmic_toolbox/dynamic_programming/primitive_calculator.cpp)
-- [Edit Distance](/algorithmic_toolbox/dynamic_programming/editdist.cpp)
+- [Edit Distance](/algorithmic_toolbox/dynamic_programming/edit_distance.cpp)
 - [Longest Common Subsequence of Two Sequences](/algorithmic_toolbox/dynamic_programming/lcs2.cpp)
 - [Longest Common Subsequence of Three Sequences](/algorithmic_toolbox/dynamic_programming/lcs3.cpp)
 
-### Week 6. Dynamic Programming 2
+### [Week 6. Dynamic Programming 2](/algorithmic_toolbox/dynamic_programming/assign.pdf)
 
-- [Programming Assignment](/algorithmic_toolbox/dynamic_programming/assign.pdf)
 - [Maximum Amount of Gold](/algorithmic_toolbox/dynamic_programming/knapsack.cpp)
 - [Partitioning Souvenirs](/algorithmic_toolbox/dynamic_programming/partition3.cpp)
 - [Maximum Value of an Arithmetic Expression](/algorithmic_toolbox/dynamic_programming/placing_parentheses.cpp)
