@@ -48,16 +48,16 @@ g++ -pipe -O2 -std=c++14 <filename> -lm
 - [Organizing a Lottery](/algorithmic_toolbox/divide_and_conquer/points_and_segments.cpp)
 - [Closest Points](/algorithmic_toolbox/divide_and_conquer/closest.cpp)
 
-### [Week 5. Dynamic Programming 1](/algorithmic_toolbox/dynamic_programming/assign.pdf)
+### [Week 5. Dynamic Programming 1](/algorithmic_toolbox/dynamic_programming1/assign.pdf)
 
-- [Money Change Again](/algorithmic_toolbox/dynamic_programming/change_dp.cpp)
-- [Primitive Calculator](/algorithmic_toolbox/dynamic_programming/primitive_calculator.cpp)
-- [Edit Distance](/algorithmic_toolbox/dynamic_programming/edit_distance.cpp)
-- [Longest Common Subsequence of Two Sequences](/algorithmic_toolbox/dynamic_programming/lcs2.cpp)
-- [Longest Common Subsequence of Three Sequences](/algorithmic_toolbox/dynamic_programming/lcs3.cpp)
+- [Money Change Again](/algorithmic_toolbox/dynamic_programming1/change_dp.cpp)
+- [Primitive Calculator](/algorithmic_toolbox/dynamic_programming1/primitive_calculator.cpp)
+- [Edit Distance](/algorithmic_toolbox/dynamic_programming1/edit_distance.cpp)
+- [Longest Common Subsequence of Two Sequences](/algorithmic_toolbox/dynamic_programming1/lcs2.cpp)
+- [Longest Common Subsequence of Three Sequences](/algorithmic_toolbox/dynamic_programming1/lcs3.cpp)
 
-### [Week 6. Dynamic Programming 2](/algorithmic_toolbox/dynamic_programming/assign.pdf)
+### [Week 6. Dynamic Programming 2](/algorithmic_toolbox/dynamic_programming2/assign.pdf)
 
-- [Maximum Amount of Gold](/algorithmic_toolbox/dynamic_programming/knapsack.cpp)
-- [Partitioning Souvenirs](/algorithmic_toolbox/dynamic_programming/partition3.cpp)
-- [Maximum Value of an Arithmetic Expression](/algorithmic_toolbox/dynamic_programming/placing_parentheses.cpp)
+- [Maximum Amount of Gold](/algorithmic_toolbox/dynamic_programming2/knapsack.cpp)
+- [Partitioning Souvenirs](/algorithmic_toolbox/dynamic_programming2/partition3.cpp)
+- [Maximum Value of an Arithmetic Expression](/algorithmic_toolbox/dynamic_programming2/placing_parentheses.cpp)
