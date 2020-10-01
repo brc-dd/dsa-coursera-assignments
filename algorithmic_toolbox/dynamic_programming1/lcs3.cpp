@@ -1,11 +1,25 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
 
 using std::vector;
 
 int lcs3(vector<int> &a, vector<int> &b, vector<int> &c) {
-    //write your code here
-    return std::min(std::min(a.size(), b.size()), c.size());
+    int n = a.size(), m = b.size(), l = c.size();
+    vector<vector<vector<int>>> dp(
+        n + 1, vector<vector<int>>(m + 1, vector<int>(l + 1)));
+    for (int i = 0; i <= n; ++i)
+        for (int j = 0; j <= m; ++j)
+            for (int k = 0; k <= l; ++k)
+                if (i and j and k) {
+                    if (a[i - 1] == b[j - 1] and b[j - 1] == c[k - 1])
+                        dp[i][j][k] = dp[i - 1][j - 1][k - 1] + 1;
+                    else
+                        dp[i][j][k] =
+                            std::max({dp[i - 1][j][k], dp[i][j - 1][k],
+                                      dp[i][j][k - 1]});
+                }
+    return dp[n][m][l];
 }
 
 int main() {
