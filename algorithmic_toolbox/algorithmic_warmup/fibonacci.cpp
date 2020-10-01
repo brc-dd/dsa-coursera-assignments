@@ -1,11 +1,11 @@
-#include <bits/stdc++.h>
-#define int long long
-#define round roundl
-#define pow powl
+#include <cmath>
+#include <iostream>
 using namespace std;
-int32_t main() {
-    int n;
-    cin >> n;
-    cout << round(pow((1 + sqrt(5)) / 2, n) / sqrt(5));
-    return 0;
+
+#define int long long
+
+signed main() {
+  int n;
+  cin >> n;
+  cout << (int)roundl(powl((1 + sqrtl(5)) / 2, n) / sqrtl(5));
 }
