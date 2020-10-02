@@ -7,12 +7,13 @@ using namespace std;
 
 #define int long long
 #define all(v) v.begin(), v.end()
+#define iit istream_iterator<int>(cin)
 
 signed main() {
-  int n;
-  cin >> n;
-  vector<int> a(istream_iterator<int>(cin), {}),
-      b(istream_iterator<int>(cin), {});
+  auto n = *iit;
+  vector<int> a(n), b(n);
+  copy_n(iit, n, a.begin());
+  copy_n(iit, n, b.begin());
   sort(all(a));
   sort(all(b));
   cout << inner_product(all(a), b.begin(), 0LL);
