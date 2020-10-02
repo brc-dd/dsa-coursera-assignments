@@ -6,6 +6,7 @@ using namespace std;
 
 #define int long long
 #define all(v) v.begin(), v.end()
+#define iit istream_iterator<int>(cin)
 #define pb push_back
 
 void solve(int n) {
@@ -43,8 +44,4 @@ void solve(int n) {
   copy(all(seq), ostream_iterator<int>(cout, " "));
 }
 
-signed main() {
-  int n;
-  cin >> n;
-  solve(n);
-}
+signed main() { solve(*iit); }
