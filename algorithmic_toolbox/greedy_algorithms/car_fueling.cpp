@@ -7,7 +7,7 @@ using namespace std;
 #define iit istream_iterator<int>(cin)
 #define pb push_back
 
-int solve(vector<int> &v, int d, int m, int n) {
+int solve(int d, int m, int n, vector<int> v) {
   int ctr = 0, l = 0;
   v.pb(d);
   for (int i = 0; i < n and l + m < d; ++i)
@@ -23,8 +23,4 @@ int solve(vector<int> &v, int d, int m, int n) {
   return ctr;
 }
 
-signed main() {
-  auto d = *iit, m = *iit, n = *iit;
-  vector<int> v(iit, {});
-  cout << solve(v, d, m, n);
-}
+signed main() { cout << solve(*iit, *iit, *iit, vector<int>(iit, {})); }

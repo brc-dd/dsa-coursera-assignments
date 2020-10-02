@@ -2,12 +2,14 @@
 #include <cmath>
 #include <iomanip>
 #include <iostream>
+#include <iterator>
 #include <utility>
 #include <vector>
 using namespace std;
 
 #define int long long
 #define all(v) v.begin(), v.end()
+#define iit istream_iterator<int>(cin)
 #define pb push_back
 
 #define x first
@@ -41,11 +43,9 @@ float min_distance(vector<pair<int, int>>::iterator beg,
 }
 
 signed main() {
-  int n;
-  cin >> n;
-  vector<pair<int, int>> P(n);
+  vector<pair<int, int>> P(*iit);
   for (auto &&i : P)
-    cin >> i.x >> i.y;
+    i = {*iit, *iit};
   sort(all(P));
   cout << fixed << setprecision(4) << min_distance(all(P));
 }

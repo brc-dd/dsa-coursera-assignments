@@ -25,6 +25,6 @@ void solve(vector<pair<int, int>> &v) {
 signed main() {
   vector<pair<int, int>> v(*iit);
   for (auto &&i : v)
-    cin >> i.second >> i.first;
+    i = {*iit, *iit};
   solve(v);
 }

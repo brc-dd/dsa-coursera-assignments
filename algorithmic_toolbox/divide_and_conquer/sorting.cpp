@@ -7,11 +7,11 @@ using namespace std;
 
 #define int long long
 #define all(v) v.begin(), v.end()
+#define iit istream_iterator<int>(cin)
 
 signed main() {
-  int n;
-  cin >> n;
-  vector<int> v(istream_iterator<int>(cin), {});
+  *iit;
+  vector<int> v(iit, {});
   sort(all(v));
   copy(all(v), ostream_iterator<int>(cout, " "));
 }
