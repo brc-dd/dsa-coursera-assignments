@@ -1,22 +1,17 @@
-#include <bits/stdc++.h>
-#define all(v) v.begin(), v.end()
-#define input(v)      \
-    for (auto &i : v) \
-    cin >> i
-#define print_nospace(v) \
-    for (auto &i : v)    \
-    cout << i
-#define int long long
+#include <algorithm>
+#include <iostream>
+#include <iterator>
+#include <string>
+#include <vector>
 using namespace std;
-typedef vector<string> strings;
-int32_t main() {
-    int n;
-    cin >> n;
-    strings v(n);
-    input(v);
-    sort(all(v), [](auto &a, auto &b) {
-        return (a + b) > (b + a);
-    });
-    print_nospace(v);
-    return 0;
+
+#define int long long
+#define all(v) v.begin(), v.end()
+
+signed main() {
+  int n;
+  cin >> n;
+  vector<string> v(istream_iterator<string>(cin), {});
+  sort(all(v), [](auto &a, auto &b) { return (a + b) > (b + a); });
+  copy(all(v), ostream_iterator<string>(cout, ""));
 }

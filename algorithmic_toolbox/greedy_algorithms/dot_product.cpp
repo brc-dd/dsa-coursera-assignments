@@ -1,19 +1,19 @@
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <iostream>
+#include <iterator>
+#include <numeric>
+#include <vector>
+using namespace std;
+
 #define int long long
 #define all(v) v.begin(), v.end()
-#define input(v)      \
-    for (auto &i : v) \
-    cin >> i
-using namespace std;
-typedef vector<int> ints;
-int32_t main() {
-    int n;
-    cin >> n;
-    ints a(n), b(n);
-    input(a);
-    input(b);
-    sort(all(a));
-    sort(all(b));
-    cout << inner_product(all(a), b.begin(), (int)0);
-    return 0;
+
+signed main() {
+  int n;
+  cin >> n;
+  vector<int> a(istream_iterator<int>(cin), {}),
+      b(istream_iterator<int>(cin), {});
+  sort(all(a));
+  sort(all(b));
+  cout << inner_product(all(a), b.begin(), 0LL);
 }
