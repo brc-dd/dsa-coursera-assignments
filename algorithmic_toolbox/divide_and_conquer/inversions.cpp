@@ -4,9 +4,10 @@
 using namespace std;
 
 #define int long long
+#define iit istream_iterator<int>(cin)
 #define pb push_back
 
-auto merge(const vector<int> &l, const vector<int> &r, int &c) {
+auto helper(const vector<int> &l, const vector<int> &r, int &c) {
   vector<int> res;
   size_t i = 0, j = 0;
   while (i < l.size() and j < r.size())
@@ -21,19 +22,17 @@ auto merge(const vector<int> &l, const vector<int> &r, int &c) {
   return res;
 }
 
-auto ms(vector<int> &v, int &c) {
+auto solve(const vector<int> &v, int &c) {
   if (v.size() < 2)
     return v;
   int m = v.size() / 2;
-  vector<int> l(v.begin(), v.begin() + m), r(v.begin() + m, v.end());
-  return merge(ms(l, c), ms(r, c), c);
+  return helper(solve(vector<int>(v.begin(), v.begin() + m), c),
+                solve(vector<int>(v.begin() + m, v.end()), c), c);
 }
 
 signed main() {
-  int n;
-  cin >> n;
-  vector<int> v(istream_iterator<int>(cin), {});
   int c = 0;
-  ms(v, c);
+  *iit;
+  solve(vector<int>(iit, {}), c);
   cout << c;
 }

@@ -31,6 +31,6 @@ signed main() {
   auto n = *iit, w = *iit;
   vector<pair<int, int>> v(n);
   for (auto &&i : v)
-    cin >> i.first >> i.second;
+    i = {*iit, *iit};
   cout << fixed << setprecision(4) << solve(v, w);
 }

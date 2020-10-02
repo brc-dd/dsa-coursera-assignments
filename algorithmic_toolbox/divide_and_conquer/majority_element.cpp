@@ -6,8 +6,9 @@ using namespace std;
 
 #define int long long
 #define all(v) v.begin(), v.end()
+#define iit istream_iterator<int>(cin)
 
-bool solve(vector<int> &v) {
+bool solve(const vector<int> &v) {
   int m = 0, c = 0;
   for (auto &&i : v)
     if (c == 0)
@@ -18,8 +19,6 @@ bool solve(vector<int> &v) {
 }
 
 signed main() {
-  int n;
-  cin >> n;
-  vector<int> v(istream_iterator<int>(cin), {});
-  cout << solve(v);
+  *iit;
+  cout << solve(vector<int>(iit, {}));
 }
