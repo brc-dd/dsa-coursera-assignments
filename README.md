@@ -34,6 +34,7 @@ g++ -pipe -O2 -std=c++14 <filename> -lm
 
 - [Money Change](/algorithmic_toolbox/greedy_algorithms/change.cpp)
 - [Maximum Value of the Loot](/algorithmic_toolbox/greedy_algorithms/fractional_knapsack.cpp)
+- [Car Fueling](/algorithmic_toolbox/greedy_algorithms/car_fueling.cpp)
 - [Maximum Advertisement Revenue](/algorithmic_toolbox/greedy_algorithms/dot_product.cpp)
 - [Collecting Signatures](/algorithmic_toolbox/greedy_algorithms/covering_segments.cpp)
 - [Maximum Number of Prizes](/algorithmic_toolbox/greedy_algorithms/different_summands.cpp)
