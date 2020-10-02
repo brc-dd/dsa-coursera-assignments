@@ -1,28 +1,31 @@
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <iostream>
+#include <iterator>
+#include <utility>
+#include <vector>
+using namespace std;
+
 #define int long long
 #define all(v) v.begin(), v.end()
 #define pb push_back
-#define print(v)      \
-    for (auto &i : v) \
-    cout << i << ' '
-using namespace std;
-typedef pair<int, int> pii;
-typedef vector<int> ints;
-typedef vector<pii> pairs;
-int32_t main() {
-    int n;
-    cin >> n;
-    pairs v(n);
-    for (auto &i : v)
-        cin >> i.second >> i.first;
-    sort(all(v));
-    ints r;
-    int p = v[0].first;
-    r.pb(p);
-    for (auto &i : v)
-        if (p > i.first or p < i.second)
-            r.pb(p = i.first);
-    cout << r.size() << endl;
-    print(r);
-    return 0;
+
+void solve(vector<pair<int, int>> &v) {
+  sort(all(v));
+  vector<int> r;
+  int p = v.front().first;
+  r.pb(p);
+  for (auto &&i : v)
+    if (p > i.first or p < i.second)
+      r.pb(p = i.first);
+  cout << r.size() << '\n';
+  copy(all(r), ostream_iterator<int>(cout, " "));
+}
+
+signed main() {
+  int n;
+  cin >> n;
+  vector<pair<int, int>> v(n);
+  for (auto &&i : v)
+    cin >> i.second >> i.first;
+  solve(v);
 }
