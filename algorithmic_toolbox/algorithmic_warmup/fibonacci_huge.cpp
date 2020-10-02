@@ -1,7 +1,9 @@
 #include <iostream>
+#include <iterator>
 using namespace std;
 
 #define int long long
+#define iit istream_iterator<int>(cin)
 
 int solve(int n, int m) {
   int a = 0, b = 1, c;
@@ -14,8 +16,7 @@ int solve(int n, int m) {
       break;
     }
   }
-  n %= c;
-  if (n == 0)
+  if ((n %= c) == 0)
     return 0;
   a = 0, b = 1;
   for (int i = 1; i < n; i++) {
@@ -26,8 +27,4 @@ int solve(int n, int m) {
   return b % m;
 }
 
-signed main() {
-  int n, m;
-  cin >> n >> m;
-  cout << solve(n, m);
-}
+signed main() { cout << solve(*iit, *iit); }
