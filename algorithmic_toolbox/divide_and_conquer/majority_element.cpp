@@ -1,23 +1,26 @@
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <iostream>
+#include <vector>
+using namespace std;
+
 #define int long long
 #define all(v) v.begin(), v.end()
-#define input(v)      \
-    for (auto &i : v) \
-    cin >> i
-#define decl_read(v, n) \
-    ints v(n);          \
-    input(v)
-using namespace std;
-typedef vector<int> ints;
-int32_t main() {
-    int n, m(0), c(0);
-    cin >> n;
-    decl_read(v, n);
-    for (auto &i : v)
-        if (c == 0)
-            m = i, c = 1;
-        else
-            (m == i) ? c++ : c--;
-    cout << (count(all(v), m) > n / 2);
-    return 0;
+
+bool solve(vector<int> &v) {
+  int m = 0, c = 0;
+  for (auto &&i : v)
+    if (c == 0)
+      m = i, c = 1;
+    else
+      c += m == i ? 1 : -1;
+  return count(all(v), m) > v.size() / 2;
+}
+
+signed main() {
+  int n;
+  cin >> n;
+  vector<int> v(n);
+  for (auto &&i : v)
+    cin >> i;
+  cout << solve(v);
 }
