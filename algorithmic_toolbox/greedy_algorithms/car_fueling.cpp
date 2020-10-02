@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iterator>
 #include <vector>
 using namespace std;
 
@@ -24,8 +25,6 @@ int solve(vector<int> &v, int d, int m) {
 signed main() {
   int d, m, n;
   cin >> d >> m >> n;
-  vector<int> v(n);
-  for (auto &&i : v)
-    cin >> i;
+  vector<int> v(istream_iterator<int>(cin), {});
   cout << solve(v, d, m);
 }
