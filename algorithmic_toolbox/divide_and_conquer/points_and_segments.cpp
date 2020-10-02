@@ -10,20 +10,18 @@ using namespace std;
 #define pb push_back
 
 signed main() {
-  int s, p, t, c = 0;
+  int s, p, c = 0;
   cin >> s >> p;
-  vector<pair<int, int>> v;
+  vector<pair<int, int>> v(2 * s);
   vector<int> points(p);
-  for (int i = 0, t; i < s; ++i) {
-    cin >> t;
-    v.pb({t, -1});
-    cin >> t;
-    v.pb({t, 1});
+  int x = 1;
+  for (auto &&i : v) {
+    cin >> i.first;
+    i.second = (x *= -1);
   }
-  for (int i = 0; i < p; ++i) {
-    cin >> t;
-    v.pb({t, 0});
-    points[i] = t;
+  for (auto &&i : points) {
+    cin >> i;
+    v.pb({i, 0});
   }
   sort(all(v));
   map<int, int> dict;
