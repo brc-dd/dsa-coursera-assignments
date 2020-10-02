@@ -6,16 +6,15 @@ using namespace std;
 
 #define int long long
 #define all(v) v.begin(), v.end()
+#define iit istream_iterator<int>(cin)
 
-int solve(vector<int> &v) {
+int solve(vector<int> &v, int n) {
   sort(all(v));
-  auto n = v.size();
   return max(v[0] * v[1], v[n - 2] * v[n - 1]);
 }
 
 signed main() {
-  int n;
-  cin >> n;
-  vector<int> v(istream_iterator<int>(cin), {});
-  cout << solve(v);
+  int n = *iit;
+  vector<int> v(iit, {});
+  cout << solve(v, n);
 }
