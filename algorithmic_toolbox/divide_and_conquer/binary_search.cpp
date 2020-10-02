@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <iterator>
 #include <vector>
 using namespace std;
 
@@ -10,8 +11,7 @@ signed main() {
   int n, t, key;
   cin >> n;
   vector<int> v(n);
-  for (auto &&i : v)
-    cin >> i;
+  copy_n(istream_iterator<int>(cin), n, v.begin());
   cin >> t;
   while (t--) {
     cin >> key;
