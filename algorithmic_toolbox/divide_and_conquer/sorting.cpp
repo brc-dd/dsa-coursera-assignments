@@ -11,9 +11,7 @@ using namespace std;
 signed main() {
   int n;
   cin >> n;
-  vector<int> v(n);
-  for (auto &&i : v)
-    cin >> i;
+  vector<int> v(istream_iterator<int>(cin), {});
   sort(all(v));
   copy(all(v), ostream_iterator<int>(cout, " "));
 }
