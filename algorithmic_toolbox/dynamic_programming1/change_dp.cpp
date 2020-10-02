@@ -1,9 +1,11 @@
 #include <climits>
 #include <iostream>
+#include <iterator>
 #include <vector>
 using namespace std;
 
 #define int long long
+#define iit istream_iterator<int>(cin)
 
 int solve(int n) {
   vector<int> den = {1, 3, 4}, dp(n + 1, LLONG_MAX);
@@ -15,8 +17,4 @@ int solve(int n) {
   return dp[n];
 }
 
-signed main() {
-  int n;
-  cin >> n;
-  cout << solve(n);
-}
+signed main() { cout << solve(*iit); }

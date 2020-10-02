@@ -6,7 +6,7 @@ using namespace std;
 
 #define int long long
 #define all(v) v.begin(), v.end()
-#define i_i istream_iterator<int>(cin)
+#define iit istream_iterator<int>(cin)
 
 int solve(vector<int> &a, vector<int> &b) {
   int n = a.size(), m = b.size();
@@ -23,9 +23,9 @@ int solve(vector<int> &a, vector<int> &b) {
 }
 
 signed main() {
-  vector<int> a(*i_i);
-  copy_n(i_i, a.size(), a.begin());
-  vector<int> b(*i_i);
-  copy_n(i_i, b.size(), b.begin());
+  vector<int> a(*iit);
+  copy_n(iit, a.size(), a.begin());
+  vector<int> b(*iit);
+  copy_n(iit, b.size(), b.begin());
   cout << solve(a, b);
 }

@@ -8,8 +8,7 @@ using namespace std;
 #define all(v) v.begin(), v.end()
 #define iit istream_iterator<int>(cin)
 
-int solve(int W, vector<int> &w) {
-  int n = w.size();
+int solve(int W, int n, const vector<int> &w) {
   vector<vector<int>> dp(n + 1, vector<int>(W + 1));
   for (int i = 0; i <= n; ++i)
     for (int j = 0; j <= W; ++j)
@@ -22,9 +21,4 @@ int solve(int W, vector<int> &w) {
   return dp[n][W];
 }
 
-signed main() {
-  auto W = *iit;
-  vector<int> w(*iit);
-  copy_n(iit, w.size(), w.begin());
-  cout << solve(W, w);
-}
+signed main() { cout << solve(*iit, *iit, vector<int>(iit, {})); }

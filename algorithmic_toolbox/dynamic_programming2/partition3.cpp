@@ -9,8 +9,8 @@ using namespace std;
 #define all(v) v.begin(), v.end()
 #define iit istream_iterator<int>(cin)
 
-bool helper(vector<int> &v, int subset[3], vector<bool> &taken, int subsetSum,
-            int l, int r) {
+bool helper(const vector<int> &v, int subset[3], vector<bool> &taken,
+            int subsetSum, int l, int r) {
   if (subset[l] == subsetSum) {
     if (l == 1)
       return true;
@@ -28,8 +28,7 @@ bool helper(vector<int> &v, int subset[3], vector<bool> &taken, int subsetSum,
   return false;
 }
 
-int solve(vector<int> &v) {
-  int n = v.size();
+int solve(int n, const vector<int> &v) {
   if (n < 3)
     return false;
   int sum = accumulate(v.begin(), v.end(), 0LL);
@@ -43,8 +42,4 @@ int solve(vector<int> &v) {
   return helper(v, subset, taken, subsetSum, 0, n - 1);
 }
 
-signed main() {
-  vector<int> v(*iit);
-  copy_n(iit, v.size(), v.begin());
-  cout << solve(v);
-}
+signed main() { cout << solve(*iit, vector<int>(iit, {})); }
