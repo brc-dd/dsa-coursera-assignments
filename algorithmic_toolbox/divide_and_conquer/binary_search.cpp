@@ -13,7 +13,8 @@ signed main() {
   for (auto &&i : v)
     cin >> i;
   cin >> t;
-  while (t-- && cin >> key) {
+  while (t--) {
+    cin >> key;
     auto pos = lower_bound(all(v), key);
     cout << (*pos == key ? pos - v.begin() : -1) << ' ';
   }
