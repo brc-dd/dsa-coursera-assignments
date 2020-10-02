@@ -14,12 +14,12 @@ g++ -pipe -O2 -std=c++14 <filename> -lm
 
 ## Course 1. Algorithmic Toolbox
 
-### [Week 1. Programming Challenges](/algorithmic_toolbox/programming_challenges/assign.pdf)
+### [Week 1. Programming Challenges](/algorithmic_toolbox/programming_challenges/assignment.pdf)
 
 - [Sum of Two Digits](/algorithmic_toolbox/programming_challenges/APlusB.cpp)
 - [Maximum Pairwise Product](/algorithmic_toolbox/programming_challenges/max_pairwise_product.cpp)
 
-### [Week 2. Algorithmic Warm-up](/algorithmic_toolbox/algorithmic_warmup/assign.pdf)
+### [Week 2. Algorithmic Warm-up](/algorithmic_toolbox/algorithmic_warmup/assignment.pdf)
 
 - [Fibonacci Number](/algorithmic_toolbox/algorithmic_warmup/fibonacci.cpp)
 - [Last Digit of a Large Fibonacci Number](/algorithmic_toolbox/algorithmic_warmup/fibonacci_last_digit.cpp)
@@ -30,7 +30,7 @@ g++ -pipe -O2 -std=c++14 <filename> -lm
 - [Last Digit of the Sum of Fibonacci Numbers Again](/algorithmic_toolbox/algorithmic_warmup/fibonacci_partial_sum.cpp)
 - [Last Digit of the Sum of Squares of Fibonacci Numbers](/algorithmic_toolbox/algorithmic_warmup/fibonacci_sum_squares.cpp)
 
-### [Week 3. Greedy Algorithms](/algorithmic_toolbox/greedy_algorithms/assign.pdf)
+### [Week 3. Greedy Algorithms](/algorithmic_toolbox/greedy_algorithms/assignment.pdf)
 
 - [Money Change](/algorithmic_toolbox/greedy_algorithms/change.cpp)
 - [Maximum Value of the Loot](/algorithmic_toolbox/greedy_algorithms/fractional_knapsack.cpp)
@@ -40,7 +40,7 @@ g++ -pipe -O2 -std=c++14 <filename> -lm
 - [Maximum Number of Prizes](/algorithmic_toolbox/greedy_algorithms/different_summands.cpp)
 - [Maximum Salary](/algorithmic_toolbox/greedy_algorithms/largest_number.cpp)
 
-### [Week 4. Divide-and-Conquer](/algorithmic_toolbox/divide_and_conquer/assign.pdf)
+### [Week 4. Divide-and-Conquer](/algorithmic_toolbox/divide_and_conquer/assignment.pdf)
 
 - [Binary Search](/algorithmic_toolbox/divide_and_conquer/binary_search.cpp)
 - [Majority Element](/algorithmic_toolbox/divide_and_conquer/majority_element.cpp)
@@ -49,7 +49,7 @@ g++ -pipe -O2 -std=c++14 <filename> -lm
 - [Organizing a Lottery](/algorithmic_toolbox/divide_and_conquer/points_and_segments.cpp)
 - [Closest Points](/algorithmic_toolbox/divide_and_conquer/closest.cpp)
 
-### [Week 5. Dynamic Programming 1](/algorithmic_toolbox/dynamic_programming1/assign.pdf)
+### [Week 5. Dynamic Programming 1](/algorithmic_toolbox/dynamic_programming1/assignment.pdf)
 
 - [Money Change Again](/algorithmic_toolbox/dynamic_programming1/change_dp.cpp)
 - [Primitive Calculator](/algorithmic_toolbox/dynamic_programming1/primitive_calculator.cpp)
@@ -57,7 +57,7 @@ g++ -pipe -O2 -std=c++14 <filename> -lm
 - [Longest Common Subsequence of Two Sequences](/algorithmic_toolbox/dynamic_programming1/lcs2.cpp)
 - [Longest Common Subsequence of Three Sequences](/algorithmic_toolbox/dynamic_programming1/lcs3.cpp)
 
-### [Week 6. Dynamic Programming 2](/algorithmic_toolbox/dynamic_programming2/assign.pdf)
+### [Week 6. Dynamic Programming 2](/algorithmic_toolbox/dynamic_programming2/assignment.pdf)
 
 - [Maximum Amount of Gold](/algorithmic_toolbox/dynamic_programming2/knapsack.cpp)
 - [Partitioning Souvenirs](/algorithmic_toolbox/dynamic_programming2/partition3.cpp)
