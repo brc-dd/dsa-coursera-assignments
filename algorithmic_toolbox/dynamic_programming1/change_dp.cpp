@@ -1,19 +1,22 @@
-#include <bits/stdc++.h>
-#define int long long
-#undef INT_MAX
-#define INT_MAX LLONG_MAX
+#include <climits>
+#include <iostream>
+#include <vector>
 using namespace std;
-int32_t main() {
-	int n, den[] = {1, 3, 4}, m = sizeof(den) / sizeof(den[0]);
-	cin >> n;
-	int dp[n + 1];
-	dp[0] = 0;
-	for (int i = 1; i <= n; i++)
-		dp[i] = INT_MAX;
-	for (int i = 1; i <= n; i++)
-		for (int j = 0; j < m and den[j] <= i; j++)
-			if (dp[i - den[j]] != INT_MAX and dp[i - den[j]] + 1 < dp[i])
-				dp[i] = dp[i - den[j]] + 1;
-	cout << dp[n];
-	return 0;
+
+#define int long long
+
+int solve(int n) {
+  vector<int> den = {1, 3, 4}, dp(n + 1, LLONG_MAX);
+  dp[0] = 0;
+  for (int i = 1; i <= n; ++i)
+    for (int j = 0; j < den.size() and den[j] <= i; ++j)
+      if (dp[i - den[j]] != INT_MAX and dp[i - den[j]] + 1 < dp[i])
+        dp[i] = dp[i - den[j]] + 1;
+  return dp[n];
+}
+
+signed main() {
+  int n;
+  cin >> n;
+  cout << solve(n);
 }
