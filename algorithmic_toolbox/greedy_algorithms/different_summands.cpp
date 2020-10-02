@@ -5,11 +5,11 @@ using namespace std;
 
 #define int long long
 #define all(v) v.begin(), v.end()
+#define iit istream_iterator<int>(cin)
 #define pb push_back
 
 signed main() {
-  int n, c = 1;
-  cin >> n;
+  int n = *iit, c = 1;
   vector<int> v;
   while (n) {
     v.pb(c);

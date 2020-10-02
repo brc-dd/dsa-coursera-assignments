@@ -7,6 +7,7 @@ using namespace std;
 
 #define int long long
 #define all(v) v.begin(), v.end()
+#define iit istream_iterator<int>(cin)
 #define pb push_back
 
 void solve(vector<pair<int, int>> &v) {
@@ -22,9 +23,7 @@ void solve(vector<pair<int, int>> &v) {
 }
 
 signed main() {
-  int n;
-  cin >> n;
-  vector<pair<int, int>> v(n);
+  vector<pair<int, int>> v(*iit);
   for (auto &&i : v)
     cin >> i.second >> i.first;
   solve(v);

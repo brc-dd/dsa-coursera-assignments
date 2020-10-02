@@ -4,10 +4,11 @@
 using namespace std;
 
 #define int long long
+#define iit istream_iterator<int>(cin)
 #define pb push_back
 
-int solve(vector<int> &v, int d, int m) {
-  int n = v.size(), ctr = 0, l = 0;
+int solve(vector<int> &v, int d, int m, int n) {
+  int ctr = 0, l = 0;
   v.pb(d);
   for (int i = 0; i < n and l + m < d; ++i)
     if (v[i] > l + m) {
@@ -23,8 +24,7 @@ int solve(vector<int> &v, int d, int m) {
 }
 
 signed main() {
-  int d, m, n;
-  cin >> d >> m >> n;
-  vector<int> v(istream_iterator<int>(cin), {});
-  cout << solve(v, d, m);
+  auto d = *iit, m = *iit, n = *iit;
+  vector<int> v(iit, {});
+  cout << solve(v, d, m, n);
 }
