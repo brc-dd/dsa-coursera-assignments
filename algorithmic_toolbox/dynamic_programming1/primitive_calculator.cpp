@@ -1,24 +1,50 @@
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <iostream>
+#include <iterator>
+#include <vector>
+using namespace std;
+
+#define int long long
 #define all(v) v.begin(), v.end()
 #define pb push_back
-using namespace std;
-int32_t main() {
-	int n;
-	cin >> n;
-	int dp[n + 1] = {0};
-	for (int i = 2; i <= n; i++) {
-		dp[i] = dp[i - 1] + 1;
-		if (i % 2 == 0) dp[i] = min(dp[i / 2] + 1, dp[i]);
-		if (i % 3 == 0) dp[i] = min(dp[i / 3] + 1, dp[i]);
-	}
-	cout << dp[n] << '\n';
-	int ptr = n;
-	vector<int> seq;
-	seq.pb(ptr);
-	while (ptr != 1)
-		seq.pb((ptr = (((ptr % 2) ? -1 : (ptr / 2)) == -1) ? ((((ptr % 3) ? -1 : (ptr / 3)) == -1) ? ((ptr - 1)) : (dp[(ptr - 1)] < dp[((ptr % 3) ? -1 : (ptr / 3))] ? (ptr - 1) : ((ptr % 3) ? -1 : (ptr / 3)))) : ((((ptr % 3) ? -1 : (ptr / 3)) == -1) ? (dp[(ptr - 1)] < dp[((ptr % 2) ? -1 : (ptr / 2))] ? (ptr - 1) : ((ptr % 2) ? -1 : (ptr / 2))) : (dp[(ptr - 1)] < dp[((ptr % 2) ? -1 : (ptr / 2))] ? (dp[(ptr - 1)] < dp[((ptr % 3) ? -1 : (ptr / 3))] ? (ptr - 1) : ((ptr % 3) ? -1 : (ptr / 3))) : (dp[((ptr % 2) ? -1 : (ptr / 2))] < dp[((ptr % 3) ? -1 : (ptr / 3))] ? ((ptr % 2) ? -1 : (ptr / 2)) : ((ptr % 3) ? -1 : (ptr / 3)))))));
-	reverse(all(seq));
-	for (auto &i : seq)
-		cout << i << ' ';
-	return 0;
+
+void solve(int n) {
+  vector<int> dp(n + 1);
+  for (int i = 2; i <= n; i++) {
+    dp[i] = dp[i - 1] + 1;
+    if (i % 2 == 0)
+      dp[i] = min(dp[i / 2] + 1, dp[i]);
+    if (i % 3 == 0)
+      dp[i] = min(dp[i / 3] + 1, dp[i]);
+  }
+  cout << dp[n] << '\n';
+  vector<int> seq;
+  seq.pb(n);
+  while (n != 1)
+    seq.pb((n = (((n % 2) ? -1 : (n / 2)) == -1)
+                    ? ((((n % 3) ? -1 : (n / 3)) == -1)
+                           ? ((n - 1))
+                           : (dp[(n - 1)] < dp[((n % 3) ? -1 : (n / 3))]
+                                  ? (n - 1)
+                                  : ((n % 3) ? -1 : (n / 3))))
+                    : ((((n % 3) ? -1 : (n / 3)) == -1)
+                           ? (dp[(n - 1)] < dp[((n % 2) ? -1 : (n / 2))]
+                                  ? (n - 1)
+                                  : ((n % 2) ? -1 : (n / 2)))
+                           : (dp[(n - 1)] < dp[((n % 2) ? -1 : (n / 2))]
+                                  ? (dp[(n - 1)] < dp[((n % 3) ? -1 : (n / 3))]
+                                         ? (n - 1)
+                                         : ((n % 3) ? -1 : (n / 3)))
+                                  : (dp[((n % 2) ? -1 : (n / 2))] <
+                                             dp[((n % 3) ? -1 : (n / 3))]
+                                         ? ((n % 2) ? -1 : (n / 2))
+                                         : ((n % 3) ? -1 : (n / 3)))))));
+  reverse(all(seq));
+  copy(all(seq), ostream_iterator<int>(cout, " "));
+}
+
+signed main() {
+  int n;
+  cin >> n;
+  solve(n);
 }
